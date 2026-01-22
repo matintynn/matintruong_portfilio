@@ -94,10 +94,10 @@ export default function ServiceSelector() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-16 lg:py-24">
                     {/* Left Column - Context */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                         className="flex flex-col gap-8"
                     >
                         <div className="flex flex-col gap-1">
@@ -129,10 +129,10 @@ export default function ServiceSelector() {
 
                     {/* Right Column - Service Selection */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
                         className="flex flex-col gap-8 border border-border dark:border-borderDark rounded-2xl p-6 lg:p-8 dark:bg-neutral-850"
                     >
                         {/* Core Services */}

@@ -26,7 +26,7 @@ export default function ServicesPage() {
                             initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
                             className="flex flex-col"
                         >
                             <SectionLabel label="Process" />
@@ -38,7 +38,7 @@ export default function ServicesPage() {
                             initial={{ opacity: 0, x: 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
                             className="flex flex-col gap-6"
                         >
                             <div className="flex flex-col gap-1">

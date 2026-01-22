@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-manrope: "Manrope", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #0A0A0A;
+    /* background: #fff url('/noise.png') repeat; */
+    font-family: var(--font-manrope);
+}
+
+body.dark {
+    color: #fff;
+    /* background: #0A0A0A url('/noise.png') repeat; */
+    background: #0A0A0A;
+}
+
+body.dark h1,
+body.dark h2 {
+    color: #fff;
+}
+
+body.dark p,
+body.dark span,
+body.dark i {
+    color: #D4D4D4;
+}

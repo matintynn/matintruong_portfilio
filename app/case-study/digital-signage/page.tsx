@@ -171,7 +171,7 @@ const digitalSignageCaseStudy = {
         category: "Website Design - Shipped",
         image: "/images/works/lunaspa-web-image.png",
         link: "/case-study/luna-spa",
-        type: "Shipped",
+        type: "Shipped" as const,
     },
 };
 

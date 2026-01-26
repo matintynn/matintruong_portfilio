@@ -663,7 +663,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
             )}
 
             {/* Results / Impact */}
-            {data.results && (
+            {data.results && data.results.title && data.results.description && (
                 <ResultsSection
                     label={data.results.label}
                     title={data.results.title}

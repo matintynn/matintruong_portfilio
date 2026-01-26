@@ -130,7 +130,7 @@ const linqyLogoCaseStudy = {
         category: "Product Design - Shipped",
         image: "/images/works/signage-product-image.png",
         link: "/case-study/digital-signage",
-        type: "Shipped",
+        type: "Shipped" as const,
     },
 };
 

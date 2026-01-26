@@ -176,7 +176,7 @@ const lunaSpaCaseStudy = {
         category: "Mobile App Design - Concept",
         image: "/images/works/nomad-app-image.png",
         link: "https://www.behance.net/gallery/233996507/Safe-Banking-App-Abroad-A-UX-Case-Study",
-        type: "Concept",
+        type: "Concept" as const,
     },
 };
 

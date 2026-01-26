@@ -3,6 +3,8 @@
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { motion } from "framer-motion";
 
+export type ProjectStatus = "Shipped" | "Concept" | "In Progress";
+
 export interface ProjectCardProps {
     icon?: string;
     category?: string;
@@ -11,6 +13,7 @@ export interface ProjectCardProps {
     link?: string;
     linkText?: string;
     image?: string;
+    type?: ProjectStatus;
 }
 
 export default function ProjectCard({

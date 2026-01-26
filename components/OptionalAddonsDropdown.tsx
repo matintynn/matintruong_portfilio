@@ -28,11 +28,11 @@ export default function OptionalAddonsDropdown({
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-between w-full text-left group"
             >
-                <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
+                <h3 className="text-base font-semibold text-title dark:text-titleDark">
                     Optional add-ons (*)
                 </h3>
                 <svg
-                    className={`w-5 h-5 text-neutral-900 dark:text-white transition-transform duration-300 ease-in-out ${isOpen ? "rotate-180" : ""
+                    className={`w-5 h-5 text-title dark:text-titleDark transition-transform duration-300 ease-in-out ${isOpen ? "rotate-180" : ""
                         }`}
                     fill="none"
                     stroke="currentColor"
@@ -69,10 +69,10 @@ export default function OptionalAddonsDropdown({
                                         type="checkbox"
                                         checked={isSelected}
                                         onChange={() => { }}
-                                        className="mt-0.5 w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-neutral-900 dark:text-white cursor-pointer transition-all duration-150"
+                                        className="mt-0.5 w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-title dark:text-titleDark cursor-pointer transition-all duration-150"
                                     />
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-sm font-medium text-neutral-900 dark:text-white">
+                                        <span className="text-sm font-medium text-title dark:text-titleDark">
                                             {service.name}
                                         </span>
                                         <span className="text-sm text-neutral-500 dark:text-neutral-400 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 max-h-0 group-hover:max-h-20 group-focus-within:max-h-20 overflow-hidden">

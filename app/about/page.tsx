@@ -19,14 +19,14 @@ export default function AboutPage() {
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-1">
                                 <SectionLabel label="Approach" />
-                                <p className="text-base text-neutral-500 dark:text-neutral-300 pr-6">
+                                <p className="text-base text-body dark:text-bodyDark pr-6">
                                     Impactful design comes from listening to users. I use research and feedback to guide every decision, and I carry what I learn from each project into the next. Understand users, explore ideas, design thoughtfully, test early, and refine continuously.
                                 </p>
                             </div>
                         </div>
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-6">
-                                <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
+                                <h3 className="text-base font-semibold text-title dark:text-titleDark">
                                     Skills & Tools
                                 </h3>
                                 <div className="flex flex-wrap gap-3">
@@ -38,7 +38,7 @@ export default function AboutPage() {
                                     ].map((skill) => (
                                         <span
                                             key={skill}
-                                            className="px-4 py-2 border border-border dark:border-borderDark rounded-full text-sm font-medium text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors"
+                                            className="px-4 py-2 border border-border dark:border-borderDark rounded-full text-sm font-medium text-title dark:text-titleDark hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors"
                                         >
                                             {skill}
                                         </span>
@@ -46,25 +46,25 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-4">
-                                <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
+                                <h3 className="text-base font-semibold text-title dark:text-titleDark">
                                     Education & Certificates
                                 </h3>
                                 <ul className="space-y-1">
                                     <li className="flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 bg-neutral-900 dark:bg-white"></div>
-                                        <span className="text-base text-neutral-500 dark:text-neutral-300">
+                                        <span className="text-base text-body dark:text-bodyDark">
                                             Google UX Design Professional Certificate
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 bg-neutral-900 dark:bg-white"></div>
-                                        <span className="text-base text-neutral-500 dark:text-neutral-300">
+                                        <span className="text-base text-body dark:text-bodyDark">
                                             FreeCodeCamp Front End Development
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 bg-neutral-900 dark:bg-white"></div>
-                                        <span className="text-base text-neutral-500 dark:text-neutral-300">
+                                        <span className="text-base text-body dark:text-bodyDark">
                                             Interactive Media Design - Seneca College Toronto, Canada
                                         </span>
                                     </li>

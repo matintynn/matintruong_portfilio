@@ -1,3 +1,4 @@
+import { body } from "framer-motion/client";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -23,6 +24,10 @@ const config: Config = {
             },
             colors: {
                 primary: "#0A0A0A",
+                title: "#0A0A0A",
+                titleDark: "#FFFFFF",
+                body: "#404040",
+                bodyDark: "#A3A3A3",
                 border: "#E5E5E5",
                 borderDark: "#262626", // neutral-700
                 neutral: {

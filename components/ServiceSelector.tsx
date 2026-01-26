@@ -102,21 +102,21 @@ export default function ServiceSelector() {
                     >
                         <div className="flex flex-col gap-1">
                             <SectionLabel label="Web design & development" />
-                            <p className="text-base text-neutral-500 dark:text-neutral-300">
+                            <p className="text-base text-body dark:text-bodyDark">
                                 Optional add-ons available for more complex or scalable projects.
                             </p>
                         </div>
 
                         {/* Included by Default */}
                         <div className="flex flex-col gap-3">
-                            <h4 className="text-base font-semibold text-neutral-900 dark:text-white">
+                            <h4 className="text-base font-semibold text-title dark:text-titleDark">
                                 Notes
                             </h4>
                             <ul className="space-y-2">
                                 {includedItems.map((item, index) => (
                                     <li
                                         key={index}
-                                        className="text-base text-neutral-500 dark:text-neutral-300 flex items-center gap-2"
+                                        className="text-base text-body dark:text-bodyDark flex items-center gap-2"
                                     >
                                         <div className="w-1 h-1 rounded-full bg-neutral-400 dark:bg-neutral-500"></div>
                                         {item}
@@ -138,7 +138,7 @@ export default function ServiceSelector() {
                         {/* Core Services */}
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-col gap-1">
-                                <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
+                                <h3 className="text-base font-semibold text-title dark:text-titleDark">
                                     Standard package
                                 </h3>
                             </div>
@@ -146,7 +146,7 @@ export default function ServiceSelector() {
                                 {coreServices.map((service, index) => (
                                     <li
                                         key={index}
-                                        className="text-base text-neutral-500 dark:text-neutral-300 flex items-center gap-2"
+                                        className="text-base text-body dark:text-bodyDark flex items-center gap-2"
                                     >
                                         <div className="w-1 h-1 rounded-full bg-neutral-400 dark:bg-neutral-500"></div>
                                         {service}

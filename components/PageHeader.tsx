@@ -21,7 +21,7 @@ export default function PageHeader({
             initial={{ opacity: 0, x: titlePosition === "left" ? -30 : 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold md:leading-[1] tracking-tight text-neutral-900 dark:text-white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold md:leading-[1] tracking-tight text-title dark:text-titleDark"
         >
             {title}
         </motion.h1>
@@ -36,9 +36,9 @@ export default function PageHeader({
         >
             <div className="flex flex-col gap-1">
                 <SectionLabel label={label} />
-                <p className="text-base text-neutral-500 dark:text-neutral-300">{description}</p>
+                <p className="text-base text-body dark:text-bodyDark">{description}</p>
             </div>
-            <p className="text-base text-neutral-500 dark:text-neutral-300">
+            <p className="text-base text-body dark:text-bodyDark">
                 <i className="ri-arrow-down-line text-md"></i>
             </p>
         </motion.div>

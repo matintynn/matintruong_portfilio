@@ -79,8 +79,8 @@ export default function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={`text-sm font-semibold uppercase transition-colors ${pathname === link.href
-                                ? "text-neutral-900 dark:text-white"
-                                : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+                                ? "text-title dark:text-titleDark"
+                                : "text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark"
                                 }`}
                         >
                             {link.label}
@@ -93,7 +93,7 @@ export default function Navbar() {
                     {/* Dark Mode Toggle */}
                     <button
                         onClick={toggleDarkMode}
-                        className="text-sm font-semibold uppercase text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
+                        className="text-sm font-semibold uppercase text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark transition-colors"
                     >
                         {isDark ? 'LIGHTMODE' : 'DARKMODE'}
                     </button>
@@ -101,7 +101,7 @@ export default function Navbar() {
                     {/* Contact Link with Arrow */}
                     <Link
                         href="mailto:matintyson.design@gmail.com"
-                        className="text-sm font-semibold uppercase flex items-center text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
+                        className="text-sm font-semibold uppercase flex items-center text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark transition-colors"
                     >
                         CONTACT
                         <i className="ri-arrow-right-up-line text-lg"></i>
@@ -111,7 +111,7 @@ export default function Navbar() {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="lg:hidden flex items-center gap-2 px-4 py-2 border border-border dark:border-borderDark rounded-full text-sm font-semibold uppercase transition-colors text-neutral-900 dark:text-white"
+                    className="lg:hidden flex items-center gap-2 px-4 py-2 border border-border dark:border-borderDark rounded-full text-sm font-semibold uppercase transition-colors text-title dark:text-titleDark"
                 >
                     {isMenuOpen ? 'CLOSE' : 'OPEN'}
                 </button>
@@ -121,7 +121,6 @@ export default function Navbar() {
             <div
                 className={`lg:hidden fixed left-0 right-0 top-20 h-[calc(100vh-80px)] bg-white dark:bg-neutral-900 z-40 flex flex-col items-center pt-16 gap-8 transition-all duration-400 ease-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
                     }`}
-                style={{ backgroundImage: "url('/noise.png')", backgroundRepeat: 'repeat' }}
             >
                 {navLinks.map((link, index) => (
                     <Link
@@ -129,8 +128,8 @@ export default function Navbar() {
                         href={link.href}
                         onClick={() => setIsMenuOpen(false)}
                         className={`text-2xl font-semibold uppercase transition-all ease-out ${pathname === link.href
-                            ? "text-neutral-900 dark:text-white"
-                            : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+                            ? "text-title dark:text-titleDark"
+                            : "text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark"
                             } ${isMenuOpen
                                 ? 'translate-x-0 opacity-100'
                                 : 'translate-x-10 opacity-0'
@@ -148,7 +147,7 @@ export default function Navbar() {
 
                 <button
                     onClick={toggleDarkMode}
-                    className={`text-2xl font-semibold uppercase transition-all ease-out text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white ${isMenuOpen
+                    className={`text-2xl font-semibold uppercase transition-all ease-out text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark ${isMenuOpen
                         ? 'translate-x-0 opacity-100'
                         : 'translate-x-10 opacity-0'
                         }`}
@@ -165,7 +164,7 @@ export default function Navbar() {
                 <Link
                     href="mailto:matintyson.design@gmail.com"
                     onClick={() => setIsMenuOpen(false)}
-                    className={`text-2xl font-semibold uppercase flex items-center gap-2 transition-all ease-out text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white ${isMenuOpen
+                    className={`text-2xl font-semibold uppercase flex items-center gap-2 transition-all ease-out text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark ${isMenuOpen
                         ? 'translate-x-0 opacity-100'
                         : 'translate-x-10 opacity-0'
                         }`}

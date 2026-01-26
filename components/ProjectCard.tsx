@@ -48,7 +48,7 @@ export default function ProjectCard({
                     {/* Left: Type and Project Name */}
                     <div className="flex flex-col">
                         {title && (
-                            <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
+                            <h3 className="text-base font-semibold text-title dark:text-titleDark">
                                 {title}
                             </h3>
                         )}
@@ -63,9 +63,9 @@ export default function ProjectCard({
                     {link && (
                         <a
                             href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-shrink-0 text-sm font-medium text-neutral-900 dark:text-white transition-all duration-300 flex items-center gap-1.5 lg:opacity-0 lg:translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0"
+                            target={link.startsWith("http") ? "_blank" : undefined}
+                            rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="flex-shrink-0 text-sm font-medium text-title dark:text-titleDark transition-all duration-300 flex items-center gap-1.5 lg:opacity-0 lg:translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0"
                         >
                             {linkText}
                             <RiArrowRightUpLine size={16} />

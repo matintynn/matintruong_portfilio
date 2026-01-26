@@ -1,6 +1,21 @@
+import { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContentBlock from "@/components/ContentBlock";
 import SectionLabel from "@/components/SectionLabel";
+import { siteConfig } from "@/lib/seo-config";
+
+export const metadata: Metadata = {
+    title: "About Matin Truong - Product Designer & Developer",
+    description: "Learn about Matin Truong, a product designer and developer based in Toronto. I design, explore, and collaborate to create meaningful digital experiences.",
+    alternates: {
+        canonical: `${siteConfig.url}/about`,
+    },
+    openGraph: {
+        title: "About Matin Truong - Product Designer & Developer",
+        description: "Learn about Matin Truong, a product designer and developer based in Toronto.",
+        url: `${siteConfig.url}/about`,
+    },
+};
 
 export default function AboutPage() {
     return (

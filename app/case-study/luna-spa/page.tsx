@@ -1,4 +1,21 @@
+import { Metadata } from "next";
 import CaseStudyTemplate from "@/components/CaseStudyTemplate";
+import { siteConfig } from "@/lib/seo-config";
+
+export const metadata: Metadata = {
+    title: "Luna Essence Spa Website Design Case Study | Matin Truong",
+    description: "Calm, elegant website redesign for a luxury spa brand. See how I created a premium digital experience emphasizing serenity and service offerings.",
+    keywords: ["spa website design", "luxury web design", "UX case study", "website redesign", "Houston designer"],
+    alternates: {
+        canonical: `${siteConfig.url}/case-study/luna-spa`,
+    },
+    openGraph: {
+        title: "Luna Essence Spa Website Design Case Study",
+        description: "Calm, elegant website redesign for a luxury spa brand, emphasizing serenity and premium service offerings.",
+        url: `${siteConfig.url}/case-study/luna-spa`,
+        images: [{ url: "/images/case-studies/lunaspa/luna-hero.png", width: 1200, height: 630 }],
+    },
+};
 
 const lunaSpaCaseStudy = {
     hero: {

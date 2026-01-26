@@ -1,4 +1,21 @@
+import { Metadata } from "next";
 import CaseStudyTemplate from "@/components/CaseStudyTemplate";
+import { siteConfig } from "@/lib/seo-config";
+
+export const metadata: Metadata = {
+    title: "Digital Signage Product Design Case Study | Matin Truong",
+    description: "End-to-end product design for a digital signage management platform. Learn how I designed an intuitive wayfinding solution for The Permanent building in Toronto.",
+    keywords: ["digital signage design", "product design", "UX case study", "wayfinding design", "Toronto design"],
+    alternates: {
+        canonical: `${siteConfig.url}/case-study/digital-signage`,
+    },
+    openGraph: {
+        title: "Digital Signage Product Design Case Study",
+        description: "End-to-end product design for a digital signage management platform focusing on intuitive content scheduling and real-time monitoring.",
+        url: `${siteConfig.url}/case-study/digital-signage`,
+        images: [{ url: "/images/case-studies/signage/signage-hero.png", width: 1200, height: 630 }],
+    },
+};
 
 const digitalSignageCaseStudy = {
     hero: {

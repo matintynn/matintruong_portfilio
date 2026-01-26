@@ -1,4 +1,21 @@
+import { Metadata } from "next";
 import CaseStudyTemplate from "@/components/CaseStudyTemplate";
+import { siteConfig } from "@/lib/seo-config";
+
+export const metadata: Metadata = {
+    title: "Linqy.ai Brand Identity Design Case Study | Matin Truong",
+    description: "Complete brand identity system for a networking startup. See the logo design process, color palette development, and typography system for Linqy.ai.",
+    keywords: ["brand identity design", "logo design", "branding case study", "startup branding", "AI healthcare branding"],
+    alternates: {
+        canonical: `${siteConfig.url}/case-study/linqy-logo`,
+    },
+    openGraph: {
+        title: "Linqy.ai Brand Identity Design Case Study",
+        description: "Complete brand identity system for a networking startup, including logo, color palette, and typography.",
+        url: `${siteConfig.url}/case-study/linqy-logo`,
+        images: [{ url: "/images/case-study/linqy-hero.png", width: 1200, height: 630 }],
+    },
+};
 
 const linqyLogoCaseStudy = {
     hero: {

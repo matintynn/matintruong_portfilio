@@ -3,11 +3,12 @@
 import PageHeader from "@/components/PageHeader";
 import ServiceSelector from "@/components/ServiceSelector";
 import SectionLabel from "@/components/SectionLabel";
+import SEOWhyChoose from "@/components/SEOWhyChoose";
 import { motion } from "framer-motion";
 
 export default function ServicesPage() {
     return (
-        <main className="min-h-screen">
+        <>
             <PageHeader
                 title="Bringing ideas to life through UX, visual design, and branding."
                 label="Services & Pricing"
@@ -17,6 +18,9 @@ export default function ServicesPage() {
 
             {/* Services Selection & Quote */}
             <ServiceSelector />
+
+            {/* Why Choose My Services Section - SEO Optimized */}
+            <SEOWhyChoose />
 
             {/* Process Section */}
             <section className="border-b border-border dark:border-borderDark">
@@ -77,6 +81,6 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     );
 }

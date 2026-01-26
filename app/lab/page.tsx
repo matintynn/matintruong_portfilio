@@ -1,5 +1,20 @@
+import { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ProjectCard from "@/components/ProjectCard";
+import { siteConfig } from "@/lib/seo-config";
+
+export const metadata: Metadata = {
+    title: "Lab - Design Experiments & Creative Projects | Matin Truong",
+    description: "Explore my design experiments, creative projects, and playground work. Small ideas turn into experiments — built to explore and learn.",
+    alternates: {
+        canonical: `${siteConfig.url}/lab`,
+    },
+    openGraph: {
+        title: "Lab - Design Experiments & Creative Projects | Matin Truong",
+        description: "Explore my design experiments, creative projects, and playground work.",
+        url: `${siteConfig.url}/lab`,
+    },
+};
 
 export default function LabPage() {
     return (

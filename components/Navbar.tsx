@@ -58,12 +58,12 @@ export default function Navbar() {
     }, [lastScrollY]);
 
     return (
-        // style={{ backgroundImage: "url('/noise.png')", backgroundRepeat: 'repeat' }}
-        <nav
+        <div
+            role="banner"
             className={`h-20 border-b border-border dark:border-borderDark sticky top-0 bg-white dark:bg-neutral-900 z-50 transition-transform duration-500 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'
                 }`}
         >
-            <div className="max-w-container mx-auto px-5 h-full flex items-center justify-between">
+            <nav className="max-w-container mx-auto px-5 h-full flex items-center justify-between" aria-label="Main navigation">
                 {/* Logo */}
                 <Link href="/" className="text-[1.5rem] font-extrabold dark:text-neutral-50">
                     <div className="w-[220px] flex flex-col leading-[0.8] tracking-tighter">
@@ -115,70 +115,70 @@ export default function Navbar() {
                 >
                     {isMenuOpen ? 'CLOSE' : 'OPEN'}
                 </button>
-            </div>
 
-            {/* Mobile Menu */}
-            <div
-                className={`lg:hidden fixed left-0 right-0 top-20 h-[calc(100vh-80px)] bg-white dark:bg-neutral-900 z-40 flex flex-col items-center pt-16 gap-8 transition-all duration-400 ease-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
-                    }`}
-            >
-                {navLinks.map((link, index) => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setIsMenuOpen(false)}
-                        className={`text-2xl font-semibold uppercase transition-all ease-out ${pathname === link.href
-                            ? "text-title dark:text-titleDark"
-                            : "text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark"
-                            } ${isMenuOpen
-                                ? 'translate-x-0 opacity-100'
-                                : 'translate-x-10 opacity-0'
+                {/* Mobile Menu */}
+                <div
+                    className={`lg:hidden fixed left-0 right-0 top-20 h-[calc(100vh-80px)] bg-white dark:bg-neutral-900 z-40 flex flex-col items-center pt-16 gap-8 transition-all duration-400 ease-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+                        }`}
+                >
+                    {navLinks.map((link, index) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={() => setIsMenuOpen(false)}
+                            className={`text-2xl font-semibold uppercase transition-all ease-out ${pathname === link.href
+                                ? "text-title dark:text-titleDark"
+                                : "text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark"
+                                } ${isMenuOpen
+                                    ? 'translate-x-0 opacity-100'
+                                    : 'translate-x-10 opacity-0'
+                                }`}
+                            style={{
+                                transitionDuration: '700ms',
+                                transitionDelay: isMenuOpen
+                                    ? `${index * 120 + 100}ms`
+                                    : `${(navLinks.length - index) * 80}ms`
+                            }}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+
+                    <button
+                        onClick={toggleDarkMode}
+                        className={`text-2xl font-semibold uppercase transition-all ease-out text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark ${isMenuOpen
+                            ? 'translate-x-0 opacity-100'
+                            : 'translate-x-10 opacity-0'
                             }`}
                         style={{
                             transitionDuration: '700ms',
                             transitionDelay: isMenuOpen
-                                ? `${index * 120 + 100}ms`
-                                : `${(navLinks.length - index) * 80}ms`
+                                ? `${navLinks.length * 120 + 100}ms`
+                                : '160ms'
                         }}
                     >
-                        {link.label}
+                        {isDark ? 'LIGHTMODE' : 'DARKMODE'}
+                    </button>
+
+                    <Link
+                        href="mailto:matintyson.design@gmail.com"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`text-2xl font-semibold uppercase flex items-center gap-2 transition-all ease-out text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark ${isMenuOpen
+                            ? 'translate-x-0 opacity-100'
+                            : 'translate-x-10 opacity-0'
+                            }`}
+                        style={{
+                            transitionDuration: '700ms',
+                            transitionDelay: isMenuOpen
+                                ? `${(navLinks.length + 1) * 120 + 100}ms`
+                                : '80ms'
+                        }}
+                    >
+                        CONTACT
+                        <i className="ri-arrow-right-up-line text-2xl"></i>
                     </Link>
-                ))}
-
-                <button
-                    onClick={toggleDarkMode}
-                    className={`text-2xl font-semibold uppercase transition-all ease-out text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark ${isMenuOpen
-                        ? 'translate-x-0 opacity-100'
-                        : 'translate-x-10 opacity-0'
-                        }`}
-                    style={{
-                        transitionDuration: '700ms',
-                        transitionDelay: isMenuOpen
-                            ? `${navLinks.length * 120 + 100}ms`
-                            : '160ms'
-                    }}
-                >
-                    {isDark ? 'LIGHTMODE' : 'DARKMODE'}
-                </button>
-
-                <Link
-                    href="mailto:matintyson.design@gmail.com"
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-2xl font-semibold uppercase flex items-center gap-2 transition-all ease-out text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark ${isMenuOpen
-                        ? 'translate-x-0 opacity-100'
-                        : 'translate-x-10 opacity-0'
-                        }`}
-                    style={{
-                        transitionDuration: '700ms',
-                        transitionDelay: isMenuOpen
-                            ? `${(navLinks.length + 1) * 120 + 100}ms`
-                            : '80ms'
-                    }}
-                >
-                    CONTACT
-                    <i className="ri-arrow-right-up-line text-2xl"></i>
-                </Link>
-            </div>
-        </nav >
+                </div>
+            </nav>
+        </div>
     );
 }

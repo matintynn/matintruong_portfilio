@@ -2,6 +2,7 @@
 
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { motion } from "framer-motion";
+import LottiePlayer from "./LottiePlayer";
 
 export type ProjectStatus = "Shipped" | "Concept" | "In Progress";
 
@@ -13,6 +14,7 @@ export interface ProjectCardProps {
     link?: string;
     linkText?: string;
     image?: string;
+    lottie?: string;
     type?: ProjectStatus;
 }
 
@@ -24,6 +26,7 @@ export default function ProjectCard({
     link,
     linkText = "View",
     image,
+    lottie,
 }: ProjectCardProps) {
     const hasContent = category || title || description || link;
 
@@ -35,13 +38,20 @@ export default function ProjectCard({
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="group bg-neutral-50 dark:bg-neutral-850 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden flex-col p-4 transition-colors duration-300"
         >
-            {/* Image Background - Always show */}
-            {image && (
+            {/* Image or Lottie Background - Always show */}
+            {(image || lottie) && (
                 <div className="aspect-[4/3] rounded-xl mb-4 overflow-hidden border border-neutral-200 dark:border-neutral-800">
-                    <div
-                        className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                        style={{ backgroundImage: `url(${image})` }}
-                    />
+                    {lottie ? (
+                        <LottiePlayer
+                            src={lottie}
+                            className="w-full h-full object-cover"
+                        />
+                    ) : image ? (
+                        <div
+                            className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            style={{ backgroundImage: `url(${image})` }}
+                        />
+                    ) : null}
                 </div>
             )}
 

@@ -3,12 +3,13 @@ import CaseStudyTemplate from "@/components/CaseStudyTemplate";
 const digitalSignageCaseStudy = {
     hero: {
         title: "How Do You Help People Find Their Way—Fast?",
-        clientLabel: "The Permanent Office Building",
+        clientLabel: "The Permanent",
         clientDescription: "320 Bay Street, Toronto",
         specs: [
             { label: "Role", value: "Lead Product Designer", link: "", isLink: false },
             { label: "Platform", value: "Large-format digital signage (lobby)", link: "", isLink: false },
             { label: "Team", value: "1 Designer, 2 Engineers", link: "", isLink: false },
+            { label: "Prototype", value: "Figma Link", link: "https://www.figma.com/proto/YmOHAp5JJJXeKmskarGMi9/320-Bay-Directory?node-id=4017-699&t=m55gA0Vpej4BabL2-1&scaling=scale-down&starting-point-node-id=4017%3A547", isLink: true },
             { label: "Timeline", value: "8 weeks - shipped", link: "", isLink: false },
         ],
         heroImage: "/images/case-studies/signage/signage-hero.png",

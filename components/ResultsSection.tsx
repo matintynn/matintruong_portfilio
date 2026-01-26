@@ -87,7 +87,7 @@ export default function ResultsSection({
 
                         {/* Image */}
                         {image && (
-                            <div className="w-full aspect-[16/9] bg-neutral-100 dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 mt-4">
+                            <div className="w-full aspect-[16/9] overflow-hidden mt-4">
                                 <img
                                     src={image}
                                     alt="Results"

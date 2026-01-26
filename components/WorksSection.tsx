@@ -12,7 +12,8 @@ interface Project {
     description: string;
     link: string;
     linkText: string;
-    image: string;
+    image?: string;
+    lottie?: string;
 }
 
 const projects: Project[] = [
@@ -24,7 +25,7 @@ const projects: Project[] = [
         description: "End-to-end product design for a digital signage management platform, focusing on intuitive content scheduling and real-time monitoring.",
         link: "/case-study/digital-signage",
         linkText: "View work",
-        image: "/images/works/signage-product-image.png",
+        lottie: "/lottie/works/signage-product-lottie.json",
     },
     {
         id: "nomad-app",
@@ -114,6 +115,7 @@ export default function WorksSection() {
                                             link={project.link}
                                             linkText={project.linkText}
                                             image={project.image}
+                                            lottie={project.lottie}
                                         />
                                     ))}
                                 </div>

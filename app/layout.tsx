@@ -11,7 +11,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-    title: "Matin Truong - Designer & Developer",
+    title: "Matin Truong - Product Designer & Developer",
     description: "Full-cycle design and build across product, web, and brand. Focused on the details, from research to launch.",
 };
 

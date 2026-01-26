@@ -99,7 +99,7 @@ interface CaseStudyData {
     reflection?: {
         label: string;
         title?: string;
-        description: string;
+        description?: string;
         learnings?: string[];
     };
     showcase?: {

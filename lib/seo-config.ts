@@ -89,9 +89,9 @@ export const defaultMetadata = {
         },
     },
     icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon.ico",
-        apple: "/favicon.ico",
+        icon: "/favicon.svg",
+        shortcut: "/favicon.svg",
+        apple: "/favicon.svg",
     },
     verification: {
         // Add your verification codes here when ready

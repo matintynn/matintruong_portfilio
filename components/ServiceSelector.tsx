@@ -82,7 +82,6 @@ const optionalServices: OptionalService[] = [
 const includedItems = [
     "Typical turnaround: 2–3 weeks",
     "Fixed price — no surprises",
-    "Each project is different so I offer custom quotes for your unique goals",
 ];
 
 export default function ServiceSelector() {
@@ -196,17 +195,11 @@ export default function ServiceSelector() {
                         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                         className="flex flex-col gap-8"
                     >
-                        <div className="flex flex-col gap-1">
-                            <SectionLabel label="Web Design & Branding" />
-                            <p className="text-base text-body dark:text-bodyDark md:w-[450px]">
-                                Your work delivers real value — your website and brand just aren't showing it yet. If things feel misaligned or outdated, you're not alone. A cohesive brand and well-designed website might be exactly what you need to grow with confidence.
-                            </p>
-                        </div>
 
                         {/* Core Services */}
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-col gap-1">
-                                <h3 className="text-base font-semibold text-title dark:text-titleDark">
+                                <h3 className="text-lg font-semibold text-title dark:text-titleDark">
                                     Whats included in the standard package?
                                 </h3>
                             </div>
@@ -225,9 +218,9 @@ export default function ServiceSelector() {
 
                         {/* Notes*/}
                         <div className="flex flex-col gap-3">
-                            <h4 className="text-base font-semibold text-title dark:text-titleDark">
+                            <h3 className="text-lg font-semibold text-title dark:text-titleDark">
                                 Notes
-                            </h4>
+                            </h3>
                             <ul className="space-y-2">
                                 {includedItems.map((item, index) => (
                                     <li

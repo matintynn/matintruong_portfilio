@@ -45,7 +45,7 @@ export default function SEOWhyChoose() {
     return (
         <section className="border-b border-border dark:border-borderDark">
             <div className="max-w-container mx-auto px-5 py-16 lg:py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                     {/* Left Column - Section Header */}
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
@@ -58,7 +58,7 @@ export default function SEOWhyChoose() {
                         <h2 className="text-2xl lg:text-3xl font-semibold text-title dark:text-titleDark mt-6 mb-4">
                             Transform Your Online Presence
                         </h2>
-                        <p className="text-base text-body dark:text-bodyDark">
+                        <p className="text-base text-body dark:text-bodyDark md:w-[430px]">
                             With over years of experience in web design and branding, I deliver results that elevate your business and connect with your audience.
                         </p>
                     </motion.div>

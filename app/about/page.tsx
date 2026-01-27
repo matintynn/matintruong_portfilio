@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContentBlock from "@/components/ContentBlock";
 import SectionLabel from "@/components/SectionLabel";
+import AboutMeSection from "@/components/AboutMeSection";
 import { siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
@@ -26,6 +27,9 @@ export default function AboutPage() {
                 description="Product Designer & Developer"
                 titlePosition="right"
             />
+
+            {/* About Me Section */}
+            <AboutMeSection />
 
             {/* Approach & Skills Section */}
             {/* <section className="border-b border-border dark:border-borderDark">

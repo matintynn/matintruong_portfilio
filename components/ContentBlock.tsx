@@ -91,10 +91,10 @@ export default function ContentBlock({
     return (
         <section className="border-b border-border dark:border-borderDark">
             <div className="max-w-container mx-auto px-5">
-                <div className={`grid grid-cols-1 ${showImage ? "lg:grid-cols-2" : ""} gap-8 py-16 lg:py-24`}>
+                <div className={`grid grid-cols-1 ${showImage ? "lg:grid-cols-2" : ""} gap-12 lg:gap-16 py-16 lg:py-24`}>
                     {showImage && imageOnRight ? (
                         <>
-                            <div className="flex items-start">{titleAndContentArea}</div>
+                            <div className="flex items-center">{titleAndContentArea}</div>
                             <div className="flex items-center justify-end w-full">
                                 <motion.div
                                     initial={{ opacity: 0, x: 30 }}
@@ -120,7 +120,7 @@ export default function ContentBlock({
                                     <img src={image} alt="" className="w-full h-auto object-cover" />
                                 </motion.div>
                             </div>
-                            <div className="flex items-start justify-end">{titleAndContentArea}</div>
+                            <div className="flex items-center justify-end">{titleAndContentArea}</div>
                         </>
                     ) : (
                         <div className="max-w-4xl mx-auto">{titleAndContentArea}</div>

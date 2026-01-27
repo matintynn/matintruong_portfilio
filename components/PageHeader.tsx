@@ -47,7 +47,7 @@ export default function PageHeader({
     return (
         <section className="border-b border-border dark:border-borderDark">
             <div className="max-w-container mx-auto px-5">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-20 h-[calc(100vh-4rem)]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 py-20 h-[calc(100vh-4rem)]">
                     {titlePosition === "left" ? (
                         <>
                             <div className="flex items-center">{titleContent}</div>

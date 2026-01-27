@@ -13,12 +13,14 @@ export default function Footer() {
                 <div className="mx-auto">
                     {/* Section 1: Chat About Your Project - 250px height */}
                     <div className="h-[250px] flex flex-col items-center justify-center px-5">
-                        <div className="flex items-center gap-2">
-                            <h2 className="text-2xl md:text-[40px] font-semibold dark:text-white text-center">
-                                Chat about your project
-                            </h2>
-                            <i className="ri-arrow-right-up-line text-2xl md:text-[56px] dark:text-neutral-300"></i>
-                        </div>
+                        <Link href="mailto:matintyson.design@gmail.com" className="flex items-center gap-2">
+                            <div className="flex items-center gap-2">
+                                <h2 className="text-2xl md:text-[40px] font-semibold dark:text-white text-center">
+                                    Chat about your project
+                                </h2>
+                                <i className="ri-arrow-right-up-line text-2xl md:text-[56px] dark:text-neutral-300"></i>
+                            </div>
+                        </Link>
                         <div className="text-body dark:text-bodyDark flex justify-center items-center gap-2 mt-2">
                             <div className="relative w-[10px] h-[10px] bg-emerald-100 dark:bg-emerald-400 flex items-center justify-center rounded-full dark:shadow-[0_0_16px_rgba(52,211,153,1)]">
                                 <div className="absolute inset-0 rounded-full bg-emerald-200 dark:bg-emerald-400 dark:animate-status-ping"></div>

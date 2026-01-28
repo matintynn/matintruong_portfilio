@@ -68,7 +68,7 @@ export default function Navbar() {
                 <Link href="/" className="text-[1.5rem] font-extrabold dark:text-neutral-50">
                     <div className="w-[220px] flex flex-col leading-[0.8] tracking-tighter">
                         <span>MATIN</span>
-                        <span>STUDIO.</span>
+                        <span>STUDIO</span>
                     </div>
                 </Link>
 

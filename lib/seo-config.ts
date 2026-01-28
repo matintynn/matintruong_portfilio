@@ -95,7 +95,7 @@ export const defaultMetadata = {
     },
     verification: {
         // Add your verification codes here when ready
-        google: "", // Google Search Console verification
+        google: "HX-0SgsQ6HdQNRpIVvGQQErH7I634T9upuNUZ34ohU8", // Google Search Console verification
         // yandex: "",
         // bing: "",
     },

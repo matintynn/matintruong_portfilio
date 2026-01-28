@@ -135,10 +135,6 @@ Each page has customized metadata:
 Structured data is added via the `<StructuredData>` component:
 
 ```tsx
-<StructuredData type="website" />
-<StructuredData type="person" />
-<StructuredData type="service" />
-<StructuredData type="localBusiness" />
 ```
 
 ---

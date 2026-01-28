@@ -58,8 +58,7 @@ export default function ServicesLayout({
     return (
         <>
             {/* Structured Data for Services */}
-            <StructuredData type="service" />
-            <StructuredData type="localBusiness" />
+            <StructuredData />
             {children}
         </>
     );

@@ -36,8 +36,7 @@ export default function RootLayout({
                 />
 
                 {/* Structured Data for SEO */}
-                <StructuredData type="website" />
-                <StructuredData type="person" />
+                <StructuredData />
             </head>
             <body className={manrope.variable}>
                 <Navbar />

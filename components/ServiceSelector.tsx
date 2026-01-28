@@ -200,7 +200,7 @@ export default function ServiceSelector() {
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-col gap-1">
                                 <h3 className="text-lg font-semibold text-title dark:text-titleDark">
-                                    Whats included in the standard package?
+                                    Whats included in the package?
                                 </h3>
                             </div>
                             <ul className="space-y-1.5">

@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <>
             <PageHeader
-                title="Design and ship products, websites, and systems thoughtfully"
+                title="I design and build digital products that look good and are easy to use :)"
                 label="Designer & Developer"
                 description="Scroll down to see projects"
                 titlePosition="left"

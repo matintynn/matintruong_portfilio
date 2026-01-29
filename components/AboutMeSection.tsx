@@ -3,13 +3,18 @@
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Palette, PlaneTakeoff, Coins, UtensilsCrossed, Briefcase, ArrowUpRight } from "lucide-react";
+import { Toolbox, PlaneTakeoff, Coins, Briefcase, ArrowUpRight, PenTool } from "lucide-react";
 
 const interests = [
     {
-        icon: Palette,
+        icon: PenTool,
         title: "Current Role",
         description: "Product Designer at Linqy.ai, designing intuitive user experiences for MedTech products that support patient screening.",
+    },
+    {
+        icon: Toolbox,
+        title: "Tool Box",
+        description: "Figma, HTML/CSS/JavaScript, React, Next.js, Tailwind, Sanity, Supabase, Framer, Lottie, Hotjar, Adobe Creative Suite, Affinity, Procreate, and more.",
     },
     {
         icon: PlaneTakeoff,
@@ -23,7 +28,7 @@ const interests = [
     },
     {
         icon: Briefcase,
-        title: "My side hustle",
+        title: "Side Hustle",
         description: "I help local businesses with quick, focused design support. Learn more →",
         link: "/services",
     },

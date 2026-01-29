@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <>
             <PageHeader
-                title="End-to-end design and build for product, web, and brand, crafted with thought."
+                title="Design and ship products, websites, and systems thoughtfully"
                 label="Designer & Developer"
                 description="Scroll down to see projects"
                 titlePosition="left"

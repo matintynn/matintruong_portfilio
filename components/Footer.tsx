@@ -16,9 +16,9 @@ export default function Footer() {
                         <Link href="mailto:matintyson.design@gmail.com" className="flex items-center gap-2">
                             <div className="flex items-center gap-2">
                                 <h2 className="text-2xl md:text-[40px] font-semibold dark:text-white text-center">
-                                    Chat about your project
+                                    Interested in working together?
                                 </h2>
-                                <i className="ri-arrow-right-up-line text-2xl md:text-[56px] dark:text-neutral-300"></i>
+                                {/* <i className="ri-arrow-right-up-line text-2xl md:text-[56px] dark:text-neutral-300"></i> */}
                             </div>
                         </Link>
                         <div className="text-body dark:text-bodyDark flex justify-center items-center gap-2 mt-2">
@@ -27,7 +27,7 @@ export default function Footer() {
                                 <div className="relative w-[5px] h-[5px] bg-emerald-500 dark:bg-emerald-100 rounded-full animate-status-pulse dark:shadow-[0_0_8px_rgba(255,255,255,0.9)]">
                                 </div>
                             </div>
-                            <p className="text-sm dark:text-emerald-400">Open for new opportunities</p>
+                            <p className="text-sm dark:text-emerald-400">Open to full-time product design roles</p>
                         </div>
                     </div>
 
@@ -79,7 +79,7 @@ export default function Footer() {
                     {/* Section 3: Copyright - 40px height */}
                     <div className="h-10 px-5 flex items-center justify-between border-t border-border dark:border-borderDark">
                         <p className="text-sm text-neutral-400 dark:text-neutral-300">
-                            ©2025 All Rights Reserved
+                            ©2026 All Rights Reserved
                         </p>
                         <button
                             onClick={() => setIsModalOpen(true)}

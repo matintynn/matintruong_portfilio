@@ -12,8 +12,7 @@ export default function Navbar() {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const navLinks = [
-        { href: "/", label: "WORKS" },
-        { href: "/services", label: "SERVICES" },
+        { href: "/", label: "WORK" },
         { href: "/lab", label: "LAB" },
         { href: "/about", label: "ABOUT" },
     ];
@@ -68,7 +67,7 @@ export default function Navbar() {
                 <Link href="/" className="text-[1.5rem] font-extrabold dark:text-neutral-50">
                     <div className="w-[220px] flex flex-col leading-[0.8] tracking-tighter">
                         <span>MATIN</span>
-                        <span>STUDIO</span>
+                        <span>TRUONG</span>
                     </div>
                 </Link>
 

@@ -66,12 +66,12 @@ export default function Footer() {
                                 BEHANCE
                             </a>
                             <a
-                                href="https://dribbble.com/matintruong42"
+                                href="https://github.com/matintynn"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm font-semibold uppercase text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark transition-colors"
                             >
-                                DRIBBBLE
+                                GITHUB
                             </a>
                         </div>
                     </div>

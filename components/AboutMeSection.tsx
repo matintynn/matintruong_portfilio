@@ -3,18 +3,24 @@
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Toolbox, PlaneTakeoff, Coins, Briefcase, ArrowUpRight, PenTool } from "lucide-react";
+import { Toolbox, PlaneTakeoff, Coins, Briefcase, ArrowUpRight, PenTool, Pin } from "lucide-react";
 
 const interests = [
     {
-        icon: PenTool,
+        icon: Pin,
         title: "Current Role",
         description: "Product Designer at Linqy.ai, designing intuitive user experiences for MedTech products that support patient screening.",
     },
     {
         icon: Toolbox,
         title: "Tool Box",
-        description: "Figma, HTML/CSS/JavaScript, React, Next.js, Tailwind, Sanity, Supabase, Framer, Lottie, Hotjar, Adobe Creative Suite, Affinity, Procreate, and more.",
+        description: "Figma, HTML/CSS/JavaScript, React, Next.js, Tailwind, Sanity, Supabase, Framer, Lottie, Hotjar, Semrush, Adobe Creative Suite, Procreate, Git/Github, Notion, Miro, and more.",
+    },
+    {
+        icon: PenTool,
+        title: "New in Writing",
+        description: "I recently started a blog to share my thoughts on design, UX, and everyday moments. Check it out →",
+        link: "/blog",
     },
     {
         icon: PlaneTakeoff,

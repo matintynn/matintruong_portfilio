@@ -2,12 +2,14 @@
 
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface PageHeaderProps {
     title: string;
     label: string;
     description: string;
     titlePosition?: "left" | "right";
+    avatarSrc?: string;
 }
 
 export default function PageHeader({
@@ -15,6 +17,7 @@ export default function PageHeader({
     label,
     description,
     titlePosition = "left",
+    avatarSrc,
 }: PageHeaderProps) {
     const titleContent = (
         <motion.h1
@@ -35,6 +38,23 @@ export default function PageHeader({
             className="flex flex-col justify-between h-full"
         >
             <div className="flex flex-col gap-1">
+                {avatarSrc && (
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+                        className="mb-2"
+                    >
+                        <Image
+                            src={avatarSrc}
+                            alt="Profile picture"
+                            width={72}
+                            height={72}
+                            className="rounded-full border border-border dark:border-borderDark"
+                            priority
+                        />
+                    </motion.div>
+                )}
                 <SectionLabel label={label} />
                 <p className="text-base text-body dark:text-bodyDark">{description}</p>
             </div>

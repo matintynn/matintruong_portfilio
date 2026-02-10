@@ -65,7 +65,7 @@ export default function Navbar() {
         >
             <nav className="max-w-container mx-auto px-5 h-full flex items-center justify-between" aria-label="Main navigation">
                 {/* Logo */}
-                <Link href="/" className="text-[1.5rem] font-extrabold dark:text-neutral-50">
+                <Link href="/" className="text-[1.5rem] font-extrabold dark:text-white">
                     <div className="w-[220px] flex flex-col leading-[0.8] tracking-tighter">
                         <span>MATIN</span>
                         <span>TRUONG</span>
@@ -80,7 +80,7 @@ export default function Navbar() {
                             href={link.href}
                             className={`text-sm font-semibold uppercase transition-colors ${pathname === link.href
                                 ? "text-title dark:text-titleDark"
-                                : "text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark"
+                                : "text-inactiveLink hover:text-activeLink dark:text-bodyDark dark:hover:text-titleDark"
                                 }`}
                         >
                             {link.label}
@@ -93,7 +93,7 @@ export default function Navbar() {
                     {/* Dark Mode Toggle */}
                     <button
                         onClick={toggleDarkMode}
-                        className="text-sm font-semibold uppercase text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark transition-colors"
+                        className="text-sm font-semibold uppercase text-inactiveLink hover:text-activeLink dark:text-bodyDark dark:hover:text-titleDark transition-colors"
                     >
                         {isDark ? 'LIGHTMODE' : 'DARKMODE'}
                     </button>
@@ -101,7 +101,7 @@ export default function Navbar() {
                     {/* Contact Link with Arrow */}
                     <Link
                         href="mailto:matintyson.design@gmail.com"
-                        className="text-sm font-semibold uppercase flex items-center text-body hover:text-title dark:text-bodyDark dark:hover:text-titleDark transition-colors"
+                        className="text-sm font-semibold uppercase flex items-center text-inactiveLink hover:text-activeLink dark:text-bodyDark dark:hover:text-titleDark transition-colors"
                     >
                         CONTACT
                         <i className="ri-arrow-right-up-line text-lg"></i>

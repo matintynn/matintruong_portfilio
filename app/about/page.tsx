@@ -26,6 +26,7 @@ export default function AboutPage() {
                 label="Hello! I'm Matin"
                 description="Product Designer & Developer"
                 titlePosition="right"
+                avatarSrc="/images/about/my-profile-500.jpg"
             />
 
             {/* About Me Section */}

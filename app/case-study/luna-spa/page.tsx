@@ -154,8 +154,16 @@ const lunaSpaCaseStudy = {
                 description:
                     "I streamlined the booking flow by reducing steps, using consistent “Book Now” CTAs, and integrating a third-party booking system optimized for mobile. This makes booking fast, intuitive, and frictionless across devices.",
                 image: "/images/case-studies/lunaspa/luna-solution-3.png",
-            },
-        ],
+            }, {
+                title: "Design System for Long-Term Growth",
+                description:
+                    "Luna didn’t think they needed a design system — until content updates became constant. I created a lightweight system that keeps everything on-brand, from menus to social to web. The result: a cohesive brand, faster execution, and effortless consistency. Think of it as design insurance that scales with the business.",
+                image: "/images/case-studies/lunaspa/luna-design-system.png",
+                externalLink: {
+                    text: "View Live Design System",
+                    url: "https://www.lunaessencebeauty.com/design-guide"
+                }
+            },],
     },
     results: {
         label: "Results",

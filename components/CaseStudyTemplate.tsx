@@ -80,6 +80,10 @@ interface CaseStudyData {
             description: string;
             image?: string;
             lottie?: string;
+            externalLink?: {
+                text: string;
+                url: string;
+            };
         }>;
     };
     results?: {
@@ -255,7 +259,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                     {noteItem.note}
                                                 </span>
                                                 {noteItem.description && (
-                                                    <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                    <p className="text-base text-body dark:text-neutral-400 whitespace-pre-line">
                                                         {noteItem.description}
                                                     </p>
                                                 )}
@@ -265,14 +269,14 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                             {noteItem.noteDetail.map((item, i) => (
                                                                 <li key={i} className="flex items-start gap-2">
                                                                     <div className="w-1 h-1 rounded-full bg-neutral-900 dark:bg-white mt-2 flex-shrink-0"></div>
-                                                                    <p className="text-base text-neutral-500 dark:text-neutral-400">
+                                                                    <p className="text-base text-body dark:text-neutral-400">
                                                                         {item}
                                                                     </p>
                                                                 </li>
                                                             ))}
                                                         </ul>
                                                     ) : (
-                                                        <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                        <p className="text-base text-body dark:text-neutral-400 whitespace-pre-line">
                                                             {noteItem.noteDetail}
                                                         </p>
                                                     )
@@ -323,7 +327,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                     {data.problem.title}
                                 </h2>
                                 {data.problem.description && (
-                                    <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                    <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                         {data.problem.description}
                                     </p>
                                 )}
@@ -335,7 +339,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                     {noteItem.note}
                                                 </span>
                                                 {noteItem.description && (
-                                                    <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                    <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                                         {noteItem.description}
                                                     </p>
                                                 )}
@@ -345,14 +349,14 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                             {noteItem.noteDetail.map((item, i) => (
                                                                 <li key={i} className="flex items-start gap-2">
                                                                     <div className="w-1 h-1 rounded-full bg-neutral-900 dark:bg-white mt-2 flex-shrink-0"></div>
-                                                                    <p className="text-base text-neutral-500 dark:text-neutral-400">
+                                                                    <p className="text-base text-body dark:text-bodyDark">
                                                                         {item}
                                                                     </p>
                                                                 </li>
                                                             ))}
                                                         </ul>
                                                     ) : (
-                                                        <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                        <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                                             {noteItem.noteDetail}
                                                         </p>
                                                     )
@@ -414,7 +418,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                     {noteItem.note}
                                                 </span>
                                                 {noteItem.description && (
-                                                    <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                    <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                                         {noteItem.description}
                                                     </p>
                                                 )}
@@ -424,14 +428,14 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                             {noteItem.noteDetail.map((item, i) => (
                                                                 <li key={i} className="flex items-start gap-2">
                                                                     <div className="w-1 h-1 rounded-full bg-neutral-900 dark:bg-white mt-2 flex-shrink-0"></div>
-                                                                    <p className="text-base text-neutral-500 dark:text-neutral-400">
+                                                                    <p className="text-base text-body dark:text-bodyDark">
                                                                         {item}
                                                                     </p>
                                                                 </li>
                                                             ))}
                                                         </ul>
                                                     ) : (
-                                                        <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                        <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                                             {noteItem.noteDetail}
                                                         </p>
                                                     )
@@ -526,7 +530,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                     {noteItem.note}
                                                 </span>
                                                 {noteItem.description && (
-                                                    <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                    <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                                         {noteItem.description}
                                                     </p>
                                                 )}
@@ -536,14 +540,14 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                             {noteItem.noteDetail.map((item, i) => (
                                                                 <li key={i} className="flex items-start gap-2">
                                                                     <div className="w-1 h-1 rounded-full bg-neutral-900 dark:bg-white mt-2 flex-shrink-0"></div>
-                                                                    <p className="text-base text-neutral-500 dark:text-neutral-400">
+                                                                    <p className="text-base text-body dark:text-bodyDark">
                                                                         {item}
                                                                     </p>
                                                                 </li>
                                                             ))}
                                                         </ul>
                                                     ) : (
-                                                        <p className="text-base text-neutral-500 dark:text-neutral-400 whitespace-pre-line">
+                                                        <p className="text-base text-body dark:text-bodyDark whitespace-pre-line">
                                                             {noteItem.noteDetail}
                                                         </p>
                                                     )
@@ -651,6 +655,17 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
                                                 <p className="text-base text-body dark:text-bodyDark">
                                                     {decision.description}
                                                 </p>
+                                                {decision.externalLink && (
+                                                    <a
+                                                        href={decision.externalLink.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-2 text-sm font-semibold text-title dark:text-titleDark hover:text-body dark:hover:text-bodyDark transition-colors mt-2 underline"
+                                                    >
+                                                        {decision.externalLink.text}
+                                                        <i className="ri-arrow-right-up-line"></i>
+                                                    </a>
+                                                )}
                                             </div>
 
                                         </motion.div>

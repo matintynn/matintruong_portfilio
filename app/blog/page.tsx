@@ -20,7 +20,7 @@ export default function BlogPage() {
     return (
         <main className="min-h-screen">
             <PageHeader
-                title="Thoughts on design, UX, and everyday moments that teach us something."
+                title="Thoughts on design, UX, and everyday moments."
                 label="Blog"
                 description="My writings"
                 titlePosition="left"
@@ -30,6 +30,12 @@ export default function BlogPage() {
                 <div className="max-w-container mx-auto px-5">
                     {/* Blog Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <BlogCard
+                            title="Why Good Registration Flows Feel Easy"
+                            summary="The best registration flows don’t feel fast because they..."
+                            link="https://medium.com/design-bootcamp/why-good-registration-flows-feel-easy-11c1b5863fa6"
+                            image="/images/blog/blog-cover2.png"
+                        />
                         <BlogCard
                             title="A UX Lesson I Found in the Ice Cream Aisle"
                             summary="A quick UX observation from an everyday moment at Loblaws."

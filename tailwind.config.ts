@@ -27,6 +27,8 @@ const config: Config = {
 				title: "#0A0A0A",
 				titleDark: "#FFFFFF",
 				body: "#404040",
+				inactiveLink: "#737373",
+				activeLink: "#A3A3A3",
 				bodyDark: "#A3A3A3",
 				border: "#E5E5E5",
 				borderDark: "#262626", // neutral-700

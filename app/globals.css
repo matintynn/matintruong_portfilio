@@ -4,6 +4,7 @@
 
 :root {
     --font-manrope: "Manrope", sans-serif;
+    --hero-text-end: #0A0A0A;
 }
 
 * {
@@ -19,6 +20,7 @@ body {
 }
 
 body.dark {
+    --hero-text-end: #FFFFFF;
     color: #fff;
     /* background: #0A0A0A url('/noise.png') repeat; */
     background: #0A0A0A;

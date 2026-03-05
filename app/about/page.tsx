@@ -1,7 +1,5 @@
 import { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
 import ContentBlock from "@/components/ContentBlock";
-import SectionLabel from "@/components/SectionLabel";
 import AboutMeSection from "@/components/AboutMeSection";
 import { siteConfig } from "@/lib/seo-config";
 
@@ -21,15 +19,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <main className="min-h-screen">
-            <PageHeader
-                title="I design, I explore, I talk to everyone in the room—and love it."
-                label="Hello! I'm Matin"
-                description="Product Designer & Developer"
-                titlePosition="right"
-                avatarSrc="/images/about/my-profile-500.jpg"
-            />
-
-            {/* About Me Section */}
+            {/* About Me Section — header + interests combined */}
             <AboutMeSection />
 
             {/* My Approach Section*/}

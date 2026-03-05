@@ -4,13 +4,13 @@ import BlogCard from "@/components/BlogCard";
 import { siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-    title: "Blog - UX Insights & Design Stories | Matin Truong",
+    title: "Journal - UX Insights & Design Stories | Matin Truong",
     description: "Read my thoughts on UX design, product design, and everyday observations that shape better experiences.",
     alternates: {
         canonical: `${siteConfig.url}/blog`,
     },
     openGraph: {
-        title: "Blog - UX Insights & Design Stories | Matin Truong",
+        title: "Journal - UX Insights & Design Stories | Matin Truong",
         description: "Read my thoughts on UX design, product design, and everyday observations that shape better experiences.",
         url: `${siteConfig.url}/blog`,
     },
@@ -21,7 +21,7 @@ export default function BlogPage() {
         <main className="min-h-screen">
             <PageHeader
                 title="Thoughts on design, UX, and everyday moments."
-                label="Blog"
+                label="Journal"
                 description="My writings"
                 titlePosition="left"
             />

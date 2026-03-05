@@ -101,7 +101,7 @@ export default function ContentBlock({
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-50px" }}
                                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                                    className="w-full border border-neutral-300 dark:border-neutral-700 rounded-2xl overflow-hidden"
+                                    className="w-full border border-neutral-300 dark:border-neutral-700 overflow-hidden"
                                 >
                                     <img src={image} alt="" className="w-full h-auto object-cover" />
                                 </motion.div>
@@ -115,7 +115,7 @@ export default function ContentBlock({
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-50px" }}
                                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                                    className="w-full border border-neutral-300 dark:border-neutral-700 rounded-2xl overflow-hidden"
+                                    className="w-full border border-neutral-300 dark:border-neutral-700 overflow-hidden"
                                 >
                                     <img src={image} alt="" className="w-full h-auto object-cover" />
                                 </motion.div>

@@ -35,16 +35,16 @@ export default function ProjectCard({
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="group bg-neutral-50 dark:bg-neutral-850 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden flex-col p-4 transition-colors duration-300"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="group flex flex-col transition-colors duration-300"
         >
-            {/* Image or Lottie Background - Always show */}
+            {/* Image or Lottie */}
             {(image || lottie) && (
-                <div className="aspect-[4/3] rounded-xl mb-4 overflow-hidden border border-neutral-200 dark:border-neutral-800">
+                <div className="aspect-[4/3] overflow-hidden border border-neutral-200 dark:border-neutral-800">
                     {lottie ? (
                         <LottiePlayer
                             src={lottie}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                     ) : image ? (
                         <div
@@ -55,24 +55,25 @@ export default function ProjectCard({
                 </div>
             )}
 
-            {/* Content Section - Only shows if there's content */}
+            {/* Content — name | category on left, view button on right */}
             {hasContent && (
-                <div className="flex items-center justify-between gap-4">
-                    {/* Left: Type and Project Name */}
-                    <div className="flex flex-col">
+                <div className="flex items-center justify-between gap-4 pt-4">
+                    <div className="flex items-center gap-2 text-base min-w-0">
                         {title && (
-                            <h3 className="text-base font-semibold text-title dark:text-titleDark">
+                            <h3 className="font-semibold text-title dark:text-titleDark truncate">
                                 {title}
                             </h3>
                         )}
                         {category && (
-                            <span className="text-base text-neutral-500 dark:text-neutral-400">
-                                {category}
-                            </span>
+                            <>
+                                <span className="text-neutral-300 dark:text-neutral-600 flex-shrink-0">|</span>
+                                <span className="text-neutral-500 dark:text-neutral-400 truncate">
+                                    {category}
+                                </span>
+                            </>
                         )}
                     </div>
 
-                    {/* Right: View Button - Always visible on mobile, slides in on hover on desktop */}
                     {link && (
                         <a
                             href={link}

@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CursorRipple from "@/components/CursorRipple";
 import StructuredData from "@/components/StructuredData";
 import { defaultMetadata } from "@/lib/seo-config";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
                 <StructuredData />
             </head>
             <body className={manrope.variable}>
+                <CursorRipple />
                 <Navbar />
                 <main>{children}</main>
                 <Footer />

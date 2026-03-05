@@ -21,32 +21,32 @@ export default function BlogCard({
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="group bg-neutral-50 dark:bg-neutral-850 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden flex-col p-4 transition-colors duration-300"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="group flex flex-col transition-colors duration-300"
         >
             {/* Image */}
-            <div className="aspect-[4/3] rounded-xl mb-4 overflow-hidden border border-neutral-200 dark:border-neutral-800">
+            <div className="aspect-[4/3] overflow-hidden border border-neutral-200 dark:border-neutral-800">
                 <div
                     className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                     style={{ backgroundImage: `url(${image})` }}
                 />
             </div>
 
-            {/* Content */}
-            <div className="flex flex-col">
-                <h3 className="text-base font-semibold text-title dark:text-titleDark">
-                    {title}
-                </h3>
-                <p className="text-base text-neutral-500 dark:text-neutral-400">
-                    {summary}
-                </p>
+            {/* Content — title | summary on left, read link on right */}
+            <div className="flex items-center justify-between gap-4 pt-4">
+                <div className="flex items-center gap-2 text-base min-w-0">
+                    <h3 className="font-semibold text-title dark:text-titleDark truncate">
+                        {title}
+                    </h3>
+                </div>
+
                 <a
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-title dark:text-titleDark hover:gap-2 transition-all duration-300 mt-2"
+                    className="flex-shrink-0 text-sm font-medium text-title dark:text-titleDark transition-all duration-300 flex items-center gap-1.5 lg:opacity-0 lg:translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0"
                 >
-                    Read on Medium
+                    Read
                     <RiArrowRightUpLine size={16} />
                 </a>
             </div>

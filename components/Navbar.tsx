@@ -14,7 +14,7 @@ export default function Navbar() {
     const navLinks = [
         { href: "/", label: "WORK" },
         { href: "/lab", label: "LAB" },
-        { href: "/blog", label: "BLOG" },
+        { href: "/blog", label: "JOURNAL" },
         { href: "/about", label: "ABOUT" },
     ];
 
@@ -104,7 +104,6 @@ export default function Navbar() {
                         className="text-sm font-semibold uppercase flex items-center text-inactiveLink hover:text-activeLink dark:text-bodyDark dark:hover:text-titleDark transition-colors"
                     >
                         CONTACT
-                        <i className="ri-arrow-right-up-line text-lg"></i>
                     </Link>
                 </div>
 

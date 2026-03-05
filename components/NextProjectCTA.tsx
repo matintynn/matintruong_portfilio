@@ -46,6 +46,7 @@ export default function NextProjectCTA({ nextProject }: NextProjectCTAProps) {
                             image={nextProject.image}
                             link={nextProject.link}
                             type={nextProject.type}
+                            linkText="View work"
                         />
                     </motion.div>
                 </div>

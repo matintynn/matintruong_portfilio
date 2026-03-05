@@ -3,39 +3,39 @@
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Toolbox, PlaneTakeoff, Coins, Briefcase, ArrowUpRight, PenTool, Pin } from "lucide-react";
+import Image from "next/image";
 
 const interests = [
     {
-        icon: Pin,
         title: "Current Role",
-        description: "Product Designer at Linqy.ai, designing intuitive user experiences for MedTech products that support patient screening.",
+        description:
+            "Product Designer at Linqy.ai, designing intuitive user experiences for MedTech products that support patient screening.",
     },
     {
-        icon: Toolbox,
         title: "Tool Box",
-        description: "Figma, HTML/CSS/JavaScript, React, Next.js, Tailwind, Sanity, Supabase, Framer, Lottie, Hotjar, Semrush, Adobe Creative Suite, Procreate, Git/Github, Notion, Miro, and more.",
+        description:
+            "Figma, HTML/CSS/JavaScript, React, Next.js, Tailwind, Sanity, Supabase, Framer, Lottie, Hotjar, Semrush, Adobe Creative Suite, Procreate, Git/Github, Notion, Miro, and more.",
     },
     {
-        icon: PenTool,
-        title: "New in Writing",
-        description: "I recently started a blog to share my thoughts on design, UX, and everyday moments. Check it out →",
+        title: "Writing",
+        description:
+            "I recently started a blog to share my thoughts on design, UX, and everyday moments.",
         link: "/blog",
     },
     {
-        icon: PlaneTakeoff,
-        title: "Travel Enthusiast",
-        description: "Three solo trips across continents taught me how much I love culture, food, and meeting new people. Always up for swapping travel stories (and food tips) hehe.",
+        title: "Travel",
+        description:
+            "Three solo trips across continents taught me how much I love culture, food, and meeting new people. Always up for swapping travel stories and food tips.",
     },
     {
-        icon: Coins,
         title: "Crypto & Solana",
-        description: "Superteam Canada introduced me to Solana — fast tech, but even better, an amazing community of builders. I’m exploring, learning, and always excited to connect ;)",
+        description:
+            "Superteam Canada introduced me to Solana. Fast tech, but even better, an amazing community of builders. Exploring, learning, and always excited to connect.",
     },
     {
-        icon: Briefcase,
         title: "Side Hustle",
-        description: "I help local businesses with quick, focused design support. Learn more →",
+        description:
+            "I help local businesses with quick, focused design support.",
         link: "/services",
     },
 ];
@@ -44,72 +44,123 @@ export default function AboutMeSection() {
     return (
         <section className="border-b border-border dark:border-borderDark">
             <div className="max-w-container mx-auto px-5 py-16 lg:py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                    {/* Left Column - About Me Header */}
+                {/* About Me Header — photo left, bio right */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    {/* Left — Section label + Photo */}
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="lg:sticky lg:top-24 h-fit max-w-xl"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                     >
-                        <SectionLabel label="About Me" />
-                        <h2 className="text-2xl lg:text-3xl font-semibold text-title dark:text-titleDark mt-6 mb-4">
-                            A Toronto-based designer who loves to build, explore, and connect
-                        </h2>
-                        <p className="text-base text-body dark:text-bodyDark mb-4">
-                            I thrive in collaborative teams where design, product, and engineering build together. Always happy to chat about design, travel, food, or emerging tech. Hit me up! 🤙
-                        </p>
-                        <a
-                            href="mailto:matintyson.design@gmail.com"
-                            className="inline-flex items-center gap-2 text-sm font-semibold uppercase text-title dark:text-titleDark hover:gap-3 transition-all"
-                        >
-                            Let's Chat
-                            <ArrowUpRight className="w-4 h-4" />
-                        </a>
+                        <SectionLabel label="Hello! I'm Matin" className="mb-8" />
+
                     </motion.div>
 
-                    {/* Right Column - Interests Grid */}
-                    <div className="grid grid-cols-1 gap-8">
-                        {interests.map((interest, index) => {
-                            const Icon = interest.icon;
-                            const content = (
-                                <motion.div
-                                    key={interest.title}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-50px" }}
-                                    transition={{
-                                        duration: 0.5,
-                                        ease: "easeOut",
-                                        delay: index * 0.1,
-                                    }}
-                                    className="flex gap-4"
-                                >
-                                    <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-full border border-border dark:border-borderDark flex items-center justify-center">
-                                            <Icon className="w-5 h-5 text-title dark:text-titleDark" />
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        <h3 className="text-lg font-semibold text-title dark:text-titleDark">
-                                            {interest.title}
-                                        </h3>
-                                        <p className="text-base text-body dark:text-bodyDark">
-                                            {interest.description}
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            );
+                    {/* Right — Bio */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+                        className="flex flex-col justify-center"
+                    >
+                        <p className="text-base text-title dark:text-titleDark leading-relaxed">
+                            I design, I explore, I talk to everyone in the room—and love it.
+                        </p>
+                        <p className="text-base text-title dark:text-titleDark leading-relaxed mt-6">
+                            I&apos;m currently working as a Product Designer at
+                            Linqy.ai, where my team and I are on a mission to build
+                            intuitive MedTech products that support patient screening
+                            and improve healthcare workflows.
+                        </p>
+                        <p className="text-base text-title dark:text-titleDark leading-relaxed mt-6">
+                            I thrive in collaborative teams where design, product, and
+                            engineering build together. Always happy to chat about
+                            design, travel, food, or emerging tech. Hit me up!
+                        </p>
 
-                            return interest.link ? (
-                                <Link key={interest.title} href={interest.link} className="hover:opacity-80 transition-opacity">
-                                    {content}
-                                </Link>
-                            ) : (
-                                content
-                            );
-                        })}
+                        <div className="mt-10">
+                            <div className="w-[72px] h-[72px] relative aspect-[3/4] overflow-hidden border border-neutral-200 dark:border-neutral-700 mb-2">
+                                <Image
+                                    src="/images/about/my-profile-500.jpg"
+                                    alt="Matin Truong"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                            </div>
+                            <span className="text-xs font-semibold uppercase tracking-widest text-body dark:text-bodyDark">
+                                Based in
+                            </span>
+                            <p className="text-base font-semibold text-title dark:text-titleDark mt-1">
+                                Toronto, Canada
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Interests — styled like WhatICanDo service list */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-20 lg:mt-28">
+                    {/* Left Column — Label */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        <SectionLabel label="More About Me" />
+                    </motion.div>
+
+                    {/* Right Column — List */}
+                    <div>
+                        <div className="flex flex-col">
+                            {interests.map((interest, index) => {
+                                const row = (
+                                    <motion.div
+                                        key={interest.title}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{
+                                            duration: 0.4,
+                                            delay: index * 0.08,
+                                        }}
+                                        className="group border-t border-border dark:border-borderDark py-6 lg:py-8"
+                                    >
+                                        <div className="flex items-start justify-between gap-8">
+                                            <div>
+                                                <h3 className="text-sm lg:text-md font-semibold uppercase text-title dark:text-titleDark tracking-wide">
+                                                    {interest.title}
+                                                </h3>
+                                                <p className="text-sm text-body dark:text-bodyDark mt-1 max-w-[480px] leading-relaxed opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20 group-hover:mt-2">
+                                                    {interest.description}
+                                                </p>
+                                            </div>
+                                            <span className="text-sm text-neutral-400 dark:text-neutral-600 font-medium mt-1 flex-shrink-0">
+                                                {String(index + 1).padStart(
+                                                    2,
+                                                    "0"
+                                                )}
+                                            </span>
+                                        </div>
+                                    </motion.div>
+                                );
+
+                                return interest.link ? (
+                                    <Link
+                                        key={interest.title}
+                                        href={interest.link}
+                                        className="block"
+                                    >
+                                        {row}
+                                    </Link>
+                                ) : (
+                                    <div key={interest.title}>{row}</div>
+                                );
+                            })}
+                            <div className="border-t border-border dark:border-borderDark" />
+                        </div>
                     </div>
                 </div>
             </div>

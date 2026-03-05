@@ -1,6 +1,8 @@
 import { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
+import HeroSection from "@/components/HeroSection";
 import WorksSection from "@/components/WorksSection";
+import WhatICanDo from "@/components/WhatICanDo";
+import ArchivesSection from "@/components/ArchivesSection";
 import { siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
@@ -14,14 +16,10 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <>
-            <PageHeader
-                title="I design and build digital products that look good and are easy to use :)"
-                label="Designer & Developer"
-                description="Scroll down to see projects"
-                titlePosition="left"
-            />
-
+            <HeroSection />
             <WorksSection />
+            <WhatICanDo />
+            <ArchivesSection />
         </>
     );
 }

@@ -58,9 +58,6 @@ export default function PageHeader({
                 <SectionLabel label={label} />
                 <p className="text-base text-body dark:text-bodyDark">{description}</p>
             </div>
-            <p className="text-base text-body dark:text-bodyDark">
-                <i className="ri-arrow-down-line text-md"></i>
-            </p>
         </motion.div>
     );
 

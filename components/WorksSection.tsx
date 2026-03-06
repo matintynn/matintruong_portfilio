@@ -36,7 +36,7 @@ const featuredProjects: FeaturedProject[] = [
         title: "Nomad Banking App",
         location: "Mobile App Design",
         type: "Concept",
-        link: "https://www.behance.net/gallery/233996507/Safe-Banking-App-Abroad-A-UX-Case-Study",
+        link: "/case-study/nomad-app",
         image: "/images/works/nomad-app-image.png",
     },
     {
@@ -52,7 +52,7 @@ const featuredProjects: FeaturedProject[] = [
         title: "Film Editor Portfolio",
         location: "Website Design",
         type: "Shipped",
-        link: "https://www.behance.net/gallery/239582733/Professional-Film-Editor-Portfolio-Design-Development",
+        link: "/case-study/dylan-website",
         image: "/images/works/dylan-web-image.png",
     },
     {

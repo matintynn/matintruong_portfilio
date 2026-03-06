@@ -198,9 +198,9 @@ const lunaSpaCaseStudy = {
     },
     nextProject: {
         title: "Nomad Banking App",
-        category: "Mobile App Design - Concept",
+        category: "Mobile App Design — Concept",
         image: "/images/works/nomad-app-image.png",
-        link: "https://www.behance.net/gallery/233996507/Safe-Banking-App-Abroad-A-UX-Case-Study",
+        link: "/case-study/nomad-app",
         type: "Concept" as const,
     },
 };

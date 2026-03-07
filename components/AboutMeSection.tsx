@@ -20,7 +20,7 @@ const interests = [
         title: "Writing",
         description:
             "I recently started a blog to share my thoughts on design, UX, and everyday moments.",
-        link: "/blog",
+        link: "/journal",
     },
     {
         title: "Travel",

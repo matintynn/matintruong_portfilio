@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     title: "Journal - UX Insights & Design Stories | Matin Truong",
     description: "Read my thoughts on UX design, product design, and everyday observations that shape better experiences.",
     alternates: {
-        canonical: `${siteConfig.url}/blog`,
+        canonical: `${siteConfig.url}/journal`,
     },
     openGraph: {
         title: "Journal - UX Insights & Design Stories | Matin Truong",
         description: "Read my thoughts on UX design, product design, and everyday observations that shape better experiences.",
-        url: `${siteConfig.url}/blog`,
+        url: `${siteConfig.url}/journal`,
     },
 };
 

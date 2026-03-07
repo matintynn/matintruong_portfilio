@@ -7,7 +7,7 @@ import NextProjectCTA from "@/components/NextProjectCTA";
 import GoBackButton from "@/components/GoBackButton";
 
 const specs = [
-    { label: "Role", value: "Web Designer & Developer" },
+    { label: "Role", value: "Lead Designer, Developer" },
     { label: "Services", value: "Website Design & Brand Identity" },
     { label: "Timeline", value: "3 weeks - 2025" },
     { label: "Status", value: "Shipped" },
@@ -129,12 +129,7 @@ export default function DylanWebsiteCaseStudy() {
                                             DR Creative Studio
                                         </span>
                                     </div>
-                                    <p className="text-base text-body dark:text-bodyDark">
-                                        Dylan Reymer - Film Editor
-                                    </p>
-                                    <p className="text-base text-body dark:text-bodyDark">
-                                        Toronto, ON
-                                    </p>
+                                    <a className="text-sm underline" href="http://dylanreymer.com" target="_blank" rel="noopener noreferrer">dylanreymer.com</a>
                                 </div>
 
                                 <div className="w-[240px] flex flex-col gap-4">
@@ -236,7 +231,7 @@ export default function DylanWebsiteCaseStudy() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="max-w-xl"
+                        className="max-w-xl mb-16"
                     >
                         <h3 className="text-2xl lg:text-3xl font-semibold leading-[1.2] tracking-tight text-title dark:text-titleDark mb-3">
                             Logo &amp; Business Card

@@ -17,6 +17,7 @@ body {
     color: #0A0A0A;
     /* background: #fff url('/noise.png') repeat; */
     font-family: var(--font-manrope);
+    overflow-x: hidden;
 }
 
 body.dark {

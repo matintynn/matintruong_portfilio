@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 
-const craftImages = [
-    "/images/craft/post-1.png",
-    "/images/craft/post-2.png",
-    "/images/craft/post-3.png",
-    "/images/craft/post-4.png",
-    "/images/craft/post-5.png",
-    "/images/craft/post-6.png",
+const craftItems: { src: string; type: "image" | "video" }[] = [
+    { src: "/images/craft/post-1.png", type: "image" },
+    { src: "/video/integrate-apps.mp4", type: "video" },
+    { src: "/images/craft/post-5.png", type: "image" },
+    { src: "/images/craft/post-2.png", type: "image" },
+    { src: "/images/craft/post-4.png", type: "image" },
+    { src: "/images/craft/post-6.png", type: "image" },
 ];
 
 export default function ArchivesSection() {
-    // Duplicate images for seamless loop
-    const images = [...craftImages, ...craftImages];
+    // Duplicate items for seamless loop
+    const items = [...craftItems, ...craftItems];
 
     return (
         <section className="border-b border-neutral-200 dark:border-neutral-800 overflow-hidden">
@@ -26,7 +26,7 @@ export default function ArchivesSection() {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                    <SectionLabel label="Crafts" />
+                    <SectionLabel label="Archives" />
                 </motion.div>
             </div>
 
@@ -44,18 +44,29 @@ export default function ArchivesSection() {
                         },
                     }}
                 >
-                    {images.map((src, i) => (
+                    {items.map((item, i) => (
                         <div
                             key={i}
                             className="flex-shrink-0 h-[280px] w-[280px] sm:h-[340px] sm:w-[340px] lg:h-[420px] lg:w-[420px] overflow-hidden border border-neutral-200 dark:border-neutral-800"
                         >
-                            <Image
-                                src={src}
-                                alt={`Craft work ${(i % craftImages.length) + 1}`}
-                                width={420}
-                                height={420}
-                                className="w-full h-full object-cover"
-                            />
+                            {item.type === "video" ? (
+                                <video
+                                    src={item.src}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                />
+                            ) : (
+                                <Image
+                                    src={item.src}
+                                    alt={`Craft work ${(i % craftItems.length) + 1}`}
+                                    width={420}
+                                    height={420}
+                                    className="w-full h-full object-cover"
+                                />
+                            )}
                         </div>
                     ))}
                 </motion.div>

@@ -31,6 +31,14 @@ export default function LabPage() {
                     {/* Experiments Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <ProjectCard
+                            title="Clawlist – Sprint & Task Tracker"
+                            description="A web app for organizing and tracking wishlists with a clean, minimal interface."
+                            link="https://clawlists.vercel.app/auth"
+                            linkText="Try App"
+                            image="/images/lab/clawlist-image.png"
+                        />
+
+                        <ProjectCard
                             title="Rescue the Xmas Star"
                             description="Sonunu is a small browser game built for sonicsvm.org through a Superteam bounty — an experiment in playful interaction and frontend game mechanics."
                             link="https://grinch-sonunu-defeated.vercel.app/"
@@ -61,6 +69,7 @@ export default function LabPage() {
                             linkText="Open in Figma"
                             image="/images/lab/sitemap-image.png"
                         />
+
                     </div>
                 </div>
             </div>

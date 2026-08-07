@@ -26,7 +26,7 @@ export default function ArchivesSection() {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                    <SectionLabel label="Archives" />
+                    <SectionLabel label="Visual Feed" />
                 </motion.div>
             </div>
 

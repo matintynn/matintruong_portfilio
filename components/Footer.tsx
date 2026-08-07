@@ -143,10 +143,7 @@ export default function Footer() {
 
                                     <div className="text-base space-y-3 text-neutral-500 dark:text-neutral-500">
                                         <p>
-                                            Thanks for checking out my work! Really happy you stopped by. Hope something here caught your eye and got you thinking.
-                                        </p>
-                                        <p>
-                                            Got questions? Want to chat? Hit me up—I would love to connect!
+                                            Thanks for stopping by! Hope something here caught your eye. Got questions or want to chat? I'd love to connect!
                                         </p>
                                     </div>
 

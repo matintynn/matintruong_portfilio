@@ -6,23 +6,15 @@ import SectionLabel from "./SectionLabel";
 const services = [
     {
         title: "Product Design",
-        description: "End-to-end product thinking — from research and wireframes to polished interfaces and design systems.",
+        description: "End-to-end product thinking — research, wireframes, prototypes, and polished UI. I focus on solving real user problems while keeping the experience intuitive and the visuals sharp.",
     },
     {
         title: "Web Design & Development",
-        description: "Custom websites built with Next.js, Tailwind, and clean code. Designed and developed from scratch.",
+        description: "Custom websites designed and built from scratch with Next.js and Tailwind. Fast, responsive, and crafted with attention to both aesthetics and performance.",
     },
     {
         title: "Brand Identity",
-        description: "Logos, visual systems, and brand guidelines that give businesses a cohesive, memorable presence.",
-    },
-    {
-        title: "Social Media Content",
-        description: "Creating engaging and visually appealing content for various social media platforms.",
-    },
-    {
-        title: "Video Editing",
-        description: "Turning raw clips into clean, engaging videos — from short social content to simple brand stories that are easy to watch and share.",
+        description: "Logos, color systems, typography, and brand guidelines that help businesses show up consistently and make a lasting impression across every touchpoint.",
     },
 ];
 
@@ -50,7 +42,7 @@ export default function WhatICanDo() {
                             transition={{ duration: 0.5 }}
                         >
                             <p className="text-xl lg:text-2xl font-bold text-title dark:text-titleDark">
-                                I mainly work on product design and web design & development, but I also take on projects in brand identity, social media content, and video editing.
+                                I focus on turning complex problems into clear, usable experiences. I work across the full design process from shaping early concepts to shipping polished interfaces that work for real people.
                             </p>
                         </motion.div>
 
@@ -63,7 +55,7 @@ export default function WhatICanDo() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.08 }}
-                                    className="group border-t border-border dark:border-borderDark py-6 lg:py-8"
+                                    className={`group border-t border-border dark:border-borderDark py-6 lg:py-8${index === services.length - 1 ? " pb-0" : ""}`}
                                 >
                                     <div className="flex items-start justify-between gap-8">
                                         <div>
@@ -80,8 +72,7 @@ export default function WhatICanDo() {
                                     </div>
                                 </motion.div>
                             ))}
-                            {/* Bottom border */}
-                            <div className="border-t border-border dark:border-borderDark" />
+
                         </div>
                     </div>
                 </div>

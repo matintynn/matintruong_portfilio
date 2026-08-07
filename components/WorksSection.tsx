@@ -3,6 +3,7 @@
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { motion } from "framer-motion";
 import LottiePlayer from "./LottiePlayer";
+import SectionLabel from "./SectionLabel";
 
 interface FeaturedProject {
     id: string;
@@ -70,20 +71,16 @@ export default function WorksSection() {
         <section className="border-b border-border dark:border-borderDark">
             <div className="max-w-container mx-auto px-5 py-16 lg:py-24">
                 {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-center mb-16 lg:mb-20"
-                >
-                    <h2 className="text-[40px] font-bold tracking-tight text-title dark:text-titleDark leading-[1.05]">
-                        Selected Works
-                    </h2>
-                    <p className="text-sm text-body dark:text-bodyDark max-w-[600px] mx-auto mt-4 leading-relaxed">
-                        A selection of projects where I worked across the full process — from understanding the problem to designing and building the final product.
-                    </p>
-                </motion.div>
+                <div className="pb-12 lg:pb-16 flex justify-start md:justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        <SectionLabel label="Selected Works" />
+                    </motion.div>
+                </div>
 
                 {/* 2-Column Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

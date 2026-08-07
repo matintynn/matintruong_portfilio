@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const headlineText =
-    "Hi! I’m Matin. I design and build products, websites, and brands. Balancing function with feeling.";
+    "Hi! I'm Matin, a Toronto-based product designer, currently building accessibility SaaS for education.";
 
 export default function HeroSection() {
     const sectionRef = useRef<HTMLDivElement>(null);

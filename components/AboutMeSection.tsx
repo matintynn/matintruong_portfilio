@@ -9,7 +9,7 @@ const interests = [
     {
         title: "Current Role",
         description:
-            "Product Designer at Linqy.ai, designing intuitive user experiences for MedTech products that support patient screening.",
+            "Product Designer at YuJa Inc., an accessibility SaaS company in Toronto. I build the design system, internal tools, and help ship features across 5 B2B2C products.",
     },
     {
         title: "Tool Box",
@@ -26,11 +26,6 @@ const interests = [
         title: "Travel",
         description:
             "Three solo trips across continents taught me how much I love culture, food, and meeting new people. Always up for swapping travel stories and food tips.",
-    },
-    {
-        title: "Crypto & Solana",
-        description:
-            "Superteam Canada introduced me to Solana. Fast tech, but even better, an amazing community of builders. Exploring, learning, and always excited to connect.",
     },
     {
         title: "Side Hustle",
@@ -69,10 +64,8 @@ export default function AboutMeSection() {
                             I design, I explore, I talk to everyone in the room—and love it.
                         </p>
                         <p className="text-base text-title dark:text-titleDark leading-relaxed mt-6">
-                            I&apos;m currently working as a Product Designer at
-                            Linqy.ai, where my team and I are on a mission to build
-                            intuitive MedTech products that support patient screening
-                            and improve healthcare workflows.
+                            I&apos;m currently a Product Designer at{" "}
+                            <a href="https://yuja.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">YuJa Inc.</a>, an accessibility SaaS company in Toronto. I work on the design system, internal tools, and help build features across 5 B2B2C products.
                         </p>
                         <p className="text-base text-title dark:text-titleDark leading-relaxed mt-6">
                             I thrive in collaborative teams where design, product, and
@@ -159,7 +152,6 @@ export default function AboutMeSection() {
                                     <div key={interest.title}>{row}</div>
                                 );
                             })}
-                            <div className="border-t border-border dark:border-borderDark" />
                         </div>
                     </div>
                 </div>
